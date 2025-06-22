@@ -40,11 +40,11 @@
  ┌────────────────────┐
  │ PromptEngine       │◄─ Customizable templates (target validation, MoA, regulatory)
  └────────┬───────────┘
-         ↓
+          ↓
  ┌────────────────────┐
  │ BioAgent (LLM Loop)│
  └────────┬───────────┘
-         ↓
+          ↓
  ┌────────────────────────────┐
  │  Tools:                    │
  │  • PubMed Scraper API      │
@@ -52,7 +52,7 @@
  │  • ClinicalTrials Query    │
  │  • VectorDB Retriever (RAG)│
  └────────┬───────────────────┘
-         ↓
+          ↓
  ┌────────────────────┐
  │ Synthesized Output │ → Rationale, citations, confidence score
  └────────────────────┘
