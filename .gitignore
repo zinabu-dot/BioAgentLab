@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Python virtual environment
+.venv/
+*.pyc
+
+# Environment variables and secrets
+.env
+
+# Python version management
+.python-version
+
+# Dependency lock files (optional, if you want reproducibility, keep uv.lock)
+# uv.lock
+
+# Data and outputs
+# data/

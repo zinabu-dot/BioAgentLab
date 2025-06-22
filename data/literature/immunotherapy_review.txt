@@ -1,0 +1,9 @@
+Title: Advances in Cancer Immunotherapy
+
+Immunotherapy has transformed oncology by harnessing the immune system to recognize and destroy tumor cells. Immune checkpoint inhibitors (ICIs), particularly antibodies against PD-1, PD-L1, and CTLA-4, have shown durable responses in melanoma, lung cancer, and renal cell carcinoma.
+
+Recent developments focus on next-generation checkpoint targets such as LAG-3, TIGIT, and CD47. Agents blocking CD47-SIRPα interaction are being tested for their ability to enhance macrophage-mediated phagocytosis. Early clinical data in hematologic malignancies are encouraging, with ongoing expansion into solid tumors.
+
+However, challenges remain, including immune-related adverse events (irAEs), tumor immune evasion, and limited efficacy in "cold" tumors with poor T-cell infiltration. Novel strategies, including bispecific antibodies, cancer vaccines, and engineered cell therapies like CAR-T and TCR-T cells, are under active investigation.
+
+The regulatory landscape is also evolving, with accelerated pathways in the U.S. and conditional approvals in the EU requiring robust post-marketing evidence.

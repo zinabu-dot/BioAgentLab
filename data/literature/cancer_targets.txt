@@ -1,0 +1,7 @@
+Title: Emerging Molecular Targets in Solid Tumors
+
+Targeted cancer therapy has advanced significantly through the identification of molecular markers like EGFR, HER2, and BRAF. Recently, attention has shifted to immune checkpoint regulators such as PD-1, PD-L1, and CTLA-4. CD47, known as the "don't eat me" signal, is overexpressed in multiple tumor types and inhibits phagocytosis by macrophages via SIRPα binding. Targeting CD47 shows promise in restoring innate immune clearance in cancers like non-small cell lung carcinoma and colorectal cancer.
+
+Furthermore, tumor-specific antigens like NY-ESO-1 and cancer-testis antigens are being explored in T-cell therapies. Advances in genomic profiling and CRISPR-based screening continue to uncover novel dependencies that may become future targets.
+
+Combination strategies that pair immune modulators with traditional kinase inhibitors are undergoing early clinical trials, particularly in melanoma and triple-negative breast cancer.
