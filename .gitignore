@@ -24,3 +24,6 @@ wheels/
 
 # The main.py is not necessary for this case as everything is in Bioagentlab.py
 main.py
+
+# Code linter and formatter
+.ruff_cache
