@@ -21,3 +21,6 @@ wheels/
 
 # Data and outputs
 # data/
+
+# The main.py is not necessary for this case as everything is in Bioagentlab.py
+main.py

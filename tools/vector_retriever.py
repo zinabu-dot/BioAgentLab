@@ -2,10 +2,10 @@
 
 import os
 from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import OpenAIEmbeddings
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
+
 
 class VectorRetriever:
     """
@@ -35,7 +35,9 @@ class VectorRetriever:
         print(f"[VectorRetriever] Split into {len(split_docs)} chunks.")
 
         # Create FAISS index
-        embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+        embeddings = HuggingFaceEmbeddings(
+            model_name="sentence-transformers/all-MiniLM-L6-v2"
+        )
         return FAISS.from_documents(split_docs, embeddings)
 
     def retrieve(self, query: str) -> str:

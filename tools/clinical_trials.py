@@ -2,6 +2,7 @@
 
 import requests
 
+
 class ClinicalTrialsTool:
     """
     Tool for querying ClinicalTrials.gov using its public API.
@@ -20,7 +21,7 @@ class ClinicalTrialsTool:
             "fields": "NCTId,Condition,BriefTitle,Phase,LocationCountry,OverallStatus",
             "min_rnk": 1,
             "max_rnk": 5,
-            "fmt": "json"
+            "fmt": "json",
         }
 
         response = requests.get(self.base_url, params=params)

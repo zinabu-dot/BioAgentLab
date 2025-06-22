@@ -3,9 +3,6 @@
 import os
 from langchain.agents import initialize_agent, Tool
 from langchain.agents.agent_types import AgentType
-from langchain_community.llms import HuggingFaceHub
-from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_community.vectorstores import FAISS
 from langchain_community.utilities import PubMedAPIWrapper
 from langchain_huggingface import HuggingFaceEndpoint
 
@@ -26,7 +23,7 @@ llm = HuggingFaceEndpoint(
     temperature=0.2,
     max_new_tokens=512,
     repetition_penalty=1.03,
-    huggingfacehub_api_token=os.getenv("HUGGINGFACEHUB_API_TOKEN")
+    huggingfacehub_api_token=os.getenv("HUGGINGFACEHUB_API_TOKEN"),
 )
 
 
@@ -37,25 +34,25 @@ prompt_template = load_prompt_template("target_validation")
 pubmed_tool = Tool(
     name="PubMed",
     func=PubMedAPIWrapper().run,
-    description="Useful for retrieving abstracts from PubMed. Input should be a biomedical topic or gene."
+    description="Useful for retrieving abstracts from PubMed. Input should be a biomedical topic or gene.",
 )
 
 uniprot_tool = Tool(
     name="UniProt",
     func=UniProtTool().run,
-    description="Provides protein and gene target information from UniProt database."
+    description="Provides protein and gene target information from UniProt database.",
 )
 
 clinical_trials_tool = Tool(
     name="ClinicalTrials",
     func=ClinicalTrialsTool().run,
-    description="Searches ClinicalTrials.gov for current trials related to the input query."
+    description="Searches ClinicalTrials.gov for current trials related to the input query.",
 )
 
 vector_retriever_tool = Tool(
     name="BiomedicalRAG",
     func=VectorRetriever().retrieve,
-    description="Retrieves vector-embedded biomedical literature related to the query for synthesis."
+    description="Retrieves vector-embedded biomedical literature related to the query for synthesis.",
 )
 
 # Initialize agent with tools
@@ -63,14 +60,16 @@ agent = initialize_agent(
     tools=[pubmed_tool, uniprot_tool, clinical_trials_tool, vector_retriever_tool],
     llm=llm,
     agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-    verbose=True
+    verbose=True,
 )
+
 
 def run_bioagent(query: str):
     print("\n[User Query]:", query)
     result = agent.run(prompt_template.format(input=query))
     print("\n[Agent Output]:\n", result)
     return result
+
 
 if __name__ == "__main__":
     # Example query

@@ -2,6 +2,7 @@
 
 import requests
 
+
 class UniProtTool:
     """
     Wrapper for querying UniProt for protein/gene information.
@@ -18,7 +19,7 @@ class UniProtTool:
         params = {
             "query": query,
             "format": "json",
-            "fields": "accession,id,protein_name,gene_names,organism_name,length,function"
+            "fields": "accession,id,protein_name,gene_names,organism_name,length,function",
         }
 
         response = requests.get(self.base_url, params=params)

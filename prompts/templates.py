@@ -1,6 +1,5 @@
 # prompts/templates.py
 
-import os
 
 TEMPLATES = {
     "target_validation": """You are a biomedical research agent assisting with early-stage drug discovery.
